@@ -31,6 +31,38 @@ This chatbot currently supports two intents:
 - **Markdown**: For documentation and reporting.
 
 ### Set-up & Execution
+🔑 Getting a Free Groq API Key
+
+This project uses Groq’s LLM API (via ChatGroq) to generate answers and queries. Groq currently provides free API access with generous limits.
+
+Step 1️⃣ Create a Groq Account
+
+Go to 👉 https://console.groq.com
+
+Sign up using:
+
+Google account or
+
+Email & password
+
+Step 2️⃣ Generate an API Key
+
+After logging in, open the Groq Console
+
+Navigate to API Keys
+
+Click Create API Key
+
+Copy the generated key (you won’t see it again)
+
+Step 3️⃣ Add API Key to .env File
+
+Create a .env file in the project root:
+
+    ```text
+    GROQ_MODEL_NAME=<Add the model name, e.g. llama-3.3-70b-versatile>
+    GROQ_API_KEY=<Add your groq api key here>
+    ```
 
 1. Run the following command to install all dependencies. 
 
@@ -38,13 +70,7 @@ This chatbot currently supports two intents:
     pip install -r app/requirements.txt
     ```
 
-1. Inside app folder, create a .env file with your GROQ credentials as follows:
-    ```text
-    GROQ_MODEL=<Add the model name, e.g. llama-3.3-70b-versatile>
-    GROQ_API_KEY=<Add your groq api key here>
-    ```
-
-1. Run the streamlit app by running the following command.
+2. Run the streamlit app by running the following command.
 
     ```bash
     streamlit run app/main.py
